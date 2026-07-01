@@ -32,7 +32,6 @@ const formatDisplayDate = (value: string) => {
   return `${day}/${month}/${year}`;
 };
 
-// Main functional component containing layout and task logic
 function DueDatePickerWorkspace() {
   const [title, setTitle] = useState("");
   const [dueDate, setDueDate] = useState("");
@@ -186,7 +185,7 @@ function DueDatePickerWorkspace() {
   );
 }
 
-// Disables Server Side Rendering entirely for this file to bypass hydration errors and make ESLint pass
+// Completely bypasses server-side compilation to avoid linting/hydration conflicts entirely
 export default dynamic(() => Promise.resolve(DueDatePickerWorkspace), {
   ssr: false,
   loading: () => (
