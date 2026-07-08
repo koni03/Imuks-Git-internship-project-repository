@@ -4,6 +4,7 @@ import Stack from "@mui/material/Stack";
 import { DashboardOverview } from "@features/dashboard/components/dashboard-overview";
 import { AppShell } from "@layouts/app-shell";
 import { AppButton } from "@components/ui/button";
+import { TaskList } from "@/components/tasks";
 
 export default function HomePage() {
   return (
@@ -12,7 +13,10 @@ export default function HomePage() {
         {/* Render the default project overview */}
         <DashboardOverview />
 
-        {/* Navigation Portal wrapped in a native HTML link with custom brand colors */}
+        {/* Render the team's newly added Task List */}
+        <TaskList />
+
+        {/* Your Custom Navigation Portal with brand colors */}
         <Stack direction="row" justifyContent="center" sx={{ mt: 2 }}>
           <a href="/duedatepicker" style={{ textDecoration: 'none' }}>
             <AppButton 
